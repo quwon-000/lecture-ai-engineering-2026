@@ -82,7 +82,6 @@ def get_lecture_summary(lecture: int) -> str:
     return path.read_text(encoding="utf-8")
 
 
-<<<<<<< HEAD
 def make_quiz(lecture: int) -> str:
     """指定した回の用語から、1問の確認問題を作る。
 
@@ -106,7 +105,8 @@ def make_quiz(lecture: int) -> str:
         },
         ensure_ascii=False,
     )
-=======
+
+
 def search_materials(query: str) -> str:
     """第1〜3回の本講義資料を検索し、関連ページの本文・タイトル・ページ番号を返す。
 
@@ -152,4 +152,3 @@ def search_graph(query: str) -> str:
         return json.dumps({"error": str(e)}, ensure_ascii=False)
     except APIError as e:
         return json.dumps({"error": api_error_message(e.code)}, ensure_ascii=False)
->>>>>>> upstream/main
